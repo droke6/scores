@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>PSA Game Scores</title>
+</head>
+<body>
+    <div class="title">
+        <h1>PSA Game Scores</h1>
+        <ul>
+            <li>Select Game Day</li>
+            <li>Select Game Court</li>
+            <li>Select Game</li>
+            <li>Enter Score</li>
+        </ul>
+    </div>
+    
+    <div class="drop-down">
+        <div class="game-day">
+            <form onclick="showCourt()">
+                <select name="day" id="day-choice">
+                    <option>Select Day</option>
+                    <option value="friday">Friday</option>
+                    <option value="saturday">Saturday</option>
+                    <option value="sunday">Sunday</option>
+                </select>
+            </form>
+        </div>
+
+        <div class="friday-time">
+            <form onclick="showTime()">
+                <select name="friday-time" id="time-choice">
+                    <option>Select Time</option>
+                    <option value="6pm">6:00 PM</option>
+                    <option value="7pm">7:00 PM</option>
+                    <option value="8pm">8:00 PM</option>
+                    <option value="9pm">9:00 PM</option>
+                </select>
+            </form>
+        </div>
+
+        <div class="saturday-time">
+            <form onclick="showTime()">
+                <select name="time" id="time-choice2">
+                    <option>Select Time</option>
+                    <option value="8am">8:00 AM</option>
+                    <option value="9am">9:00 AM</option>
+                    <option value="10am">10:00 AM</option>
+                    <option value="11am">11:00 AM</option>
+                    <option value="12am">12:00 PM</option>
+                    <option value="1pm">1:00 PM</option>
+                    <option value="2pm">2:00 PM</option>
+                    <option value="3pm">3:00 PM</option>
+                    <option value="4pm">4:00 PM</option>
+                    <option value="5pm">5:00 PM</option>
+                    <option value="6pm">6:00 PM</option>
+                    <option value="7pm">7:00 PM</option>
+                    <option value="8pm">8:00 PM</option>
+                    <option value="9pm">9:00 PM</option>
+                </select>
+            </form>
+        </div>
+
+        <div class="sunday-time">
+            <form onclick="showTime()">
+                <select name="time" id="time-choice3">
+                    <option>Select Time</option>
+                    <option value="11am">11:00 AM</option>
+                    <option value="12am">12:00 PM</option>
+                    <option value="1pm">1:00 PM</option>
+                    <option value="2pm">2:00 PM</option>
+                    <option value="3pm">3:00 PM</option>
+                    <option value="4pm">4:00 PM</option>
+                    <option value="5pm">5:00 PM</option>
+                    <option value="6pm">6:00 PM</option>
+                    <option value="7pm">7:00 PM</option>
+                    <option value="8pm">8:00 PM</option>
+                    <option value="9pm">9:00 PM</option>
+                </select>
+            </form>
+        </div>
+    </div>
+    
+    <div class="courts">
+        <div class="game-court">
+            <form onclick="showCourt()">
+                <select name="court" id="court-choice">
+                    <option>Select Court </option>
+                    <option value="blue1">Blue 1</option>
+                    <option value="blue2">Blue 2</option>
+                    <option value="blue3">Blue 3</option>
+                    <option value="blue4">Blue 4</option>
+                    <option value="green1">Green 1</option>
+                    <option value="green2">Green 2</option>
+                    <option value="green3">Green 3</option>
+                    <option value="green4">Green 4</option>
+                    <option value="green5">Green 5</option>
+                    <option value="red4">Red 4</option>
+                    <option value="red5">Red 5</option>
+                </select>
+            </form>
+        </div>
+
+        <div class="game-court2">
+            <form onclick="showCourt()">
+                <select name="court" id="court-choice2">
+                    <option>Select Court </option>
+                    <option value="blue1">Blue 1</option>
+                    <option value="blue2">Blue 2</option>
+                    <option value="blue3">Blue 3</option>
+                    <option value="blue5">Blue 5</option>
+                    <option value="green1">Green 1</option>
+                    <option value="green2">Green 2</option>
+                    <option value="green3">Green 3</option>
+                    <option value="green4">Green 4</option>
+                    <option value="green5">Green 5</option>
+                    <option value="red4">Red 4</option>
+                    <option value="red5">Red 5</option>
+                </select>
+            </form>
+        </div>
+
+        <div class="game-court3">
+            <form onclick="showCourt()">
+                <select name="court" id="court-choice3">
+                    <option>Select Court </option>
+                    <option value="blue1">Blue 1</option>
+                    <option value="blue2">Blue 2</option>
+                    <option value="blue3">Blue 3</option>
+                    <option value="blue4">Blue 4</option>
+                    <option value="green1">Green 1</option>
+                    <option value="green2">Green 2</option>
+                    <option value="green3">Green 3</option>
+                    <option value="green4">Green 4</option>
+                    <option value="green5">Green 5</option>
+                    <option value="red4">Red 4</option>
+                    <option value="red5">Red 5</option>
+                </select>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

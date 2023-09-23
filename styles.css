@@ -1,0 +1,35 @@
+.title {
+    display: block;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+.drop-down {
+    display: flex;
+    justify-content: center;
+    gap: 40px
+}
+
+.courts {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.game-court,
+.game-court2,
+.game-court3,
+.friday-time,
+.saturday-time,
+.sunday-time {
+    display: none;
+}
+
+select {
+    text-align: center;
+    font-size: 20px;
+}
+
+
