@@ -14,7 +14,7 @@ ul {
     line-height: 2rem;
 }
 
-.drop-down {
+.container {
     display: flex;
     justify-content: center;
     gap: 40px
@@ -39,4 +39,55 @@ select {
     font-size: 20px;
 }
 
+.modal {
+    display: none;
+    border-radius: 50px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: rgb(169, 156, 156);
+    width: 400px;
+    text-align: center;
+}
+
+.modal-content {
+    padding: 20px;
+    border-radius: 5px;
+
+}
+.close {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.modal-choices {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.boxes  {
+    margin: 40px;
+}
+
+label {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+input {
+    width: 50px;
+}
+
+#close:hover,
+#close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 
