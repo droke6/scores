@@ -26,8 +26,9 @@ const awayScore = document.getElementById('away-score');
 const form = document.getElementById('myForm');
 
 function submitSuccessful() {
-    myModal.style.display = 'none';
     successModal.style.display = 'block';
+    myModal.style.display = 'none';
+    errorModal.style.display = 'none';
 }
 
 function submitError() {
@@ -46,7 +47,7 @@ function hideSubmitSuccessful() {
 }
 
 function redirectToPage() {
-    window.location.href = 'http://127.0.0.1:3002/index.html';
+    window.location.href = 'https://droke6.github.io/scores/';
 }
 
 form.addEventListener('submit', function (e) {
