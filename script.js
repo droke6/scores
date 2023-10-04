@@ -1,61 +1,56 @@
-// Get references to the select elements
-const daySelect = document.getElementById('day-choice');
-const courtSelect = document.getElementById('court-choice');
-const timeSelect = document.getElementById('time-choice');
+// Select Friday (day) - shows friday-time drop down menu
 
-// Add an event listener to the day dropdown
-daySelect.addEventListener("change", function() {
-    if (daySelect.value === 'friday') {
-        // Show the time dropdown
+const fridaySelect = document.getElementById('day-choice');
+const fridayCourtSelect = document.getElementById('court-choice');
+const fridayTimeSelect = document.getElementById('friday-time');
+
+fridaySelect.addEventListener("change", function() {
+    if (fridaySelect.value === 'friday') {
         document.querySelector('.friday-time').style.display = 'block';
     } else {
-        // If a day other than Friday is selected, hide the time and court dropdowns
         document.querySelector('.friday-time').style.display = 'none';
-        document.querySelector('.game-court').style.display = 'none';
+        document.querySelector('.courts').style.display = 'none';
     }
 });
 
-// Add an event listener to the time dropdown
-timeSelect.addEventListener('change', function() {
-    // Show the court dropdown when a time is selected
-    document.querySelector('.game-court').style.display = 'block';
+fridayTimeSelect.addEventListener('change', function() {
+    document.querySelector('.courts').style.display = 'block';
 });
 
-/////////////////////////////////////////////////////////////////////////////////////
+// Select Saturday (day) - shows saturday-time drop down menu
 
+const saturdaySelect = document.getElementById ('day-choice');
+const saturdayCourtSelect = document.getElementById ('court-choice');
+const saturdayTimeSelect = document.getElementById('saturday-time');
 
-const daySelect2 = document.getElementById ('day-choice');
-const courtSelect2 = document.getElementById ('court-choice2');
-const timeSelect2 = document.getElementById('time-choice2');
-
-daySelect2.addEventListener("change", function() {
-    if (daySelect2.value === 'saturday') {
+saturdaySelect.addEventListener("change", function() {
+    if (saturdaySelect.value === 'saturday') {
         document.querySelector('.saturday-time').style.display = 'block';
     } else {
         document.querySelector('.saturday-time').style.display = 'none';
-        document.querySelector('.game-court2').style.display = 'none';
+        document.querySelector('.courts').style.display = 'none';
     }
 });
 
-timeSelect2.addEventListener('change', function() {
-    document.querySelector('.game-court2').style.display = 'block';
+saturdayTimeSelect.addEventListener('change', function() {
+    document.querySelector('.courts').style.display = 'block';
 });
 
-/////////////////////////////////////////////////////////////////////////////////////
+// Select Sunday (day) - shows sunday-time drop down menu
 
-const daySelect3 = document.getElementById('day-choice');
-const courtSelect3 = document.getElementById('court-choice3');
-const timeSelect3 = document.getElementById('time-choice3');
+const sundaySelect = document.getElementById ('day-choice');
+const sundayCourtSelect = document.getElementById ('court-choice');
+const sundayTimeSelect = document.getElementById('sunday-time');
 
-daySelect3.addEventListener('change', function() {
-    if (daySelect3.value === 'sunday') {
-        document.querySelector('.sunday-time').style.display  = 'block';
+sundaySelect.addEventListener("change", function() {
+    if (sundaySelect.value === 'sunday') {
+        document.querySelector('.sunday-time').style.display = 'block';
     } else {
         document.querySelector('.sunday-time').style.display = 'none';
-        document.querySelector('.game-court3').style.display = 'none';
+        document.querySelector('.courts').style.display = 'none';
     }
 });
 
-timeSelect3.addEventListener('change', function() {
-    document.querySelector('.game-court3').style.display = 'block';
+sundayTimeSelect.addEventListener('change', function() {
+    document.querySelector('.courts').style.display = 'block';
 });

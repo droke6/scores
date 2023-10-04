@@ -1,48 +1,67 @@
+let modal = document.getElementById('myModal')
+let courtChoice = document.getElementById('court-choice')
 
-
-var modal = document.getElementById('myModal')
-var courtChoice = document.getElementById('court-choice')
-var btn= document.getElementById("close")[0]
-var errorModal = document.getElementById('error-message')
-
-courtChoice.onclick = function(){
-    if (courtChoice.value === 'zero') {
+courtChoice.onclick = function showModal() {
+    if (courtChoice.value == 'zero') {
         document.querySelector('.modal').modal.style.display = 'none';
-    } else{
-        document.querySelector('.modal').style.display = 'block';
+    } else {
+        document.querySelector('.modal').modal.style.display = 'block';
     }
 }
 
-courtChoice.addEventListener('change', function() {
-    document.querySelector('.modal').style.display = 'block';
+courtChoice.addEventListener('change', function showModal() {
+    document.querySelector('.modal').style.display = 'block'
 })
 
+//////////////////////
 
-/////////////////////////////////////////////////////////////////////////////////
+const myModal = document.getElementById('myModal')
+const submitButton = document.getElementById('submit-button');
+const successModal = document.getElementById('successModal');
+const successMessage = document.getElementById('success-message');
+const errorModal = document.getElementById('errorModal');
+const errorMessage = document.getElementById('error-message');
+const homeScore = document.getElementById('home-score');
+const awayScore = document.getElementById('away-score');
+const form = document.getElementById('myForm');
 
-
-function submitScore(){
-    modal.style.display = 'none';
-    errorModal.style.display = "block"
+function submitSuccessful() {
+    myModal.style.display = 'none';
+    successModal.style.display = 'block';
 }
 
-function showErrorMessage() {
+function submitError() {
     errorModal.style.display = 'block';
-    setTimeout(function () {
-        hideErrorMessage();}, 700);
+    successModal.style.display = 'none';
+    modal.style.display = 'block'
 }
 
-function hideErrorMessage () {
+function hideSubmitError() {
     errorModal.style.display = 'none';
 }
 
-form.addEventListener("submit", function (e) {
+function hideSubmitSuccessful() {
+    successModal.style.display = 'none'
+    redirectToPage(); 
+}
+
+function redirectToPage() {
+    window.location.href = 'http://127.0.0.1:3002/index.html';
+}
+
+form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    var input1 = document.getElementById('input1').value.trim();
-    var input2 = document.getElementById('input2').value.trim();
+    if (homeScore.value.trim() === "" || awayScore.value.trim() === "")
+    {submitError();
+        setTimeout(function() {
+            hideSubmitError();
+        }, 700)
+    } else {
+        submitSuccessful();
+        setTimeout(function() {
+            hideSubmitSuccessful();
+        }, 1000)
+    }
 
-    if (input1 === "" || input2 === ""){
-        showErrorMessage();
-        
-}})
+})
