@@ -31,7 +31,8 @@ select {
     display: none;
 }
 
-.modal {
+.modal,
+.modal2 {
     display: none;
     border-radius: 50px;
     position: fixed;
@@ -44,6 +45,19 @@ select {
     text-align: center;
 }
 
+.result-modal {
+    display: none;
+    border-radius: 50px;
+    border: solid black;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgb(159, 68, 68);
+    width: 400px;
+    text-align: center;
+}
 .modal-content{
     display: flex;
     flex-direction: column;
@@ -53,7 +67,13 @@ select {
     align-items: center;
 }
 
-.modal-content > p {
+.result-modal-content {
+    color: white;
+    font-size: 20px;
+}
+
+.modal-content > p,
+h1 {
     margin-bottom: -20px;
 }
 
